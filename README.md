@@ -1,10 +1,3 @@
 # FrontEndPart
-hello sir
-
-hello boss
-how are you
-
-whats going on...buddy
-Prasad
-fir kab start ? aap ho boss....... boss
-kuch tho likh aur kar...
+lets start main part tommorow
+ha tik hai mai bhi sotha hu good night 
