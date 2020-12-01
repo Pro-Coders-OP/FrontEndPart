@@ -6,4 +6,4 @@ how are you
 
 whats going on...buddy
 Prasad
-fir kab start karna hai boss....... boss
+fir kab start ? aap ho boss....... boss
