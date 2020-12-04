@@ -1,9 +1,14 @@
 import React from 'react'
+import Title from './Title'
+import Footer from './Footer'
 
-export default function HomePage() {
+function HomePage() {
     return (
         <div>
-            
+            <Title />
+            <Footer />
         </div>
     )
 }
+
+export default HomePage;
