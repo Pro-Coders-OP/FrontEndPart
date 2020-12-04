@@ -1,12 +1,11 @@
-import './App.css';
+import React from 'react'
 
 function App() {
   return (
-    <div className="App">
-     <h1>PRASAD MALI : BOSS</h1>
-     <h1>SAIRAMAN KORAVENI : ASSISTANT</h1>
+    <div>
+      
     </div>
-  );
+  )
 }
 
 export default App;
