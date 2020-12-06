@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fredoka+One&family=Work+Sans:wght@700&display=swap');
 .App {
   text-align: center;
 }
@@ -41,6 +45,7 @@
 
 .react-rotating-text-cursor {
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+  
 }
 
 
@@ -56,3 +61,16 @@
     opacity: 0;
   }
 }
+
+/* .card-title {
+  font-size: 1.2vw;
+    font-family: HelveticaNowText,Helvetica,Arial,sans-serif;
+    font-weight: 1000;
+    /* line-height: .99em;
+    letter-spacing: -.04em; 
+    position: absolute;
+    width: 100%;
+    bottom: 25;
+    left: 25;
+    overflow: hidden;
+} */
