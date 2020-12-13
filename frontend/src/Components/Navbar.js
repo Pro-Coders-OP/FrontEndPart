@@ -11,7 +11,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto">
                 <li className="nav-item active ">
-                <Link className="nav-link text-light mx-2" to="/">Home <span className="sr-only">(current)</span></Link>
+                <Link className="nav-link text-light mx-2" to="/homepage">Home <span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
                 <a className="nav-link text-light mx-2" href="#">How it Works!</a>
@@ -23,7 +23,7 @@ function Navbar() {
                 <a className="nav-link text-light mx-2" href="#">About Us</a>
                 </li>
             </ul>
-            <a className="nav-item" href="#">SignOut <i className="mx-1 fas fa-sign-out-alt"></i></a>
+            <Link className="nav-item" to="/">SignOut <i className="mx-1 fas fa-sign-out-alt"></i></Link>
         </div>
     </nav>
     )

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -52,6 +53,7 @@ body {
     position: relative;
     width: fit-content;
     margin: 0 auto;
+    
 }
 
 .c-player--details .details-img img {
@@ -61,6 +63,7 @@ body {
     max-width: 250px;
     border-radius: 50%;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
+    opacity: 1;
 }
 
 .c-player--details .details-img:after {
@@ -73,6 +76,7 @@ body {
     bottom: -25px;
     border-radius: 50%;
     border: 3px dashed rgba(255, 206, 0, 1);
+    opacity: 1;
 }
 
 .c-player--details .details-title {
@@ -81,14 +85,16 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
     text-align: center;
     margin-bottom: 10px;
+    opacity: 1;
 }
 
 .c-player--details .details-artist {
-    color: #AAA;
+    color:wheat;
     font-size: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
     text-align: center;
     margin-bottom: 20px;
+    opacity: 1;
 }
 
 .c-player--controls {
@@ -96,6 +102,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
+    opacity: 1;
 }
 
 .c-player--controls .play-btn {
@@ -110,6 +117,7 @@ body {
     color: #FFF;
     font-size: 24px;
     cursor: pointer;
+    opacity: 1;
 }
 
 .c-player--controls .skip-btn {
@@ -119,6 +127,7 @@ body {
     cursor: pointer;
     color: #888;
     font-size: 18px;
+    opacity: 1;
 }
 
 .container {
@@ -127,7 +136,7 @@ body {
   }
 
 .cent-m {
-    
+        font-family: 'Niconne', cursive;
         width: 500px;
         height: 100px;
         /* background-color: red; */
@@ -146,5 +155,5 @@ body {
 }
 
 .img_back {
-    opacity: 0.4;
+    opacity: 0.5;
 }

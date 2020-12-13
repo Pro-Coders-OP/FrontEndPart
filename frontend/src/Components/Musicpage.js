@@ -28,7 +28,7 @@ class Musicpage extends Component {
         {
           title: "The Horizon of Saudade - Dil Bechara",
           artist: "A.R.Rahman",
-          img_src: "https://images.genius.com/f798d2dd0bbec0c05bfb0ef94c7b2534.1000x1000x1.jpg",
+          img_src: "https://correio-cdn3.cworks.cloud/fileadmin/_processed_/1/3/csm_Lavinia_PersonagemPautaSaudade_8a97b97893.jpg",
           src: "https://pagalsong.in/uploads/systemuploads/mp3/Dil%20Bechara/The%20Horizon%20of%20Saudade%20-%20Dil%20Bechara%20128%20Kbps.mp3"
         },
         {

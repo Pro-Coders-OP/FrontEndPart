@@ -55,7 +55,7 @@ function Player(props) {
         </div>  
         </div>
         <div className="col-6">
-            <h1 className="cent-m">Next up: <span >{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</span></h1>
+            <h1 className=" display-3 cent-m">Next up: <span >{props.songs[props.nextSongIndex].title} <br/> by {props.songs[props.nextSongIndex].artist}</span></h1>
         </div>
         {/* <div className="cent-s">
                 <h1><p className="position-absolute top-0 start-100 translate-middle">Next up: <span >{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</span></p></h1>

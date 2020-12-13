@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import bg_1 from "../assets/bg_1.jpg"
 import "./SignIn_Reg.css"
+import { Link } from "react-router-dom";
 
 export default class SignIn extends Component {
     render() {
         return (
-            <div   className="container-fluid ">
+            <div className="container-fluid ">
                 <div className="row">
                       
                 <div class="card bg-dark">
@@ -23,9 +24,9 @@ export default class SignIn extends Component {
                            <label>Password</label>
                            <input type="password" className="form-control" placeholder="Enter password" />
                          </div>
-                         <div className="text-center "><button type="submit" className="btn btn-primary  btn-block  mt-4 mb-2">Login</button></div>
+                         <div className="text-center "><Link to="/homepage"><button type="submit" className="btn btn-primary  btn-block  mt-4 mb-2">Login</button></Link></div>
                          <p className="forgot-password text-right mt-1">
-                           To Create an account <a href="#">sign Up?</a></p>
+                           To Create an account <Link to="/register">sign Up?</Link></p>
                          </form>
                          </div>
                          </div>
