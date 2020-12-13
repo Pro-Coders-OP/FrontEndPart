@@ -1,14 +1,19 @@
 import React from 'react'
-import Title from './Title'
-import Footer from './Footer'
+import Title from './Title';
+
+
 
 function HomePage() {
     return (
-        <div>
-            <Title />
-            <Footer />
-        </div>
-    )
+         <div>
+             
+             <Title />
+             {/* <Musicmain /> */}
+
+           </div>
+    
+    ) 
 }
 
 export default HomePage;
+

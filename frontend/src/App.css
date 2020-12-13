@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fredoka+One&family=Work+Sans:wght@700&display=swap');
+
 .App {
+  
   text-align: center;
 }
 
@@ -61,6 +63,7 @@
     opacity: 0;
   }
 }
+
 
 /* .card-title {
   font-size: 1.2vw;

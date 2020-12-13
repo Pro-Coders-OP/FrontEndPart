@@ -1,5 +1,6 @@
 import React from 'react'
 import sairaman from "../assets/sairaman.jpg"
+import { Link } from "react-router-dom";
 
 
 function Title() {
@@ -17,10 +18,11 @@ function Title() {
                 <img src={sairaman} class="card-img" alt="Homepageimage"/>
                     <div class="card-img-overlay d-flex justify-content-left pt-5 mt-5">
                     <div className="py-5">
-                    <h1 class="card-title mt-5 py-5 display-1 text-light font-weight-bolder " style={{fontFamily: 'Fredoka One, cursive'}}>HEY !<br/> 
-                    <h3 className="display-5" style={{fontFamily: 'Permanent Marker, cursive'}}><ReactRotatingText items={['ARE YOU TIRED OF EVERDAY HUSTLE?', 'DO YOU WANNA RELAX?']} /></h3></h1>
+                    <h1 class="card-title mt-5 py-1 display-1 text-light font-weight-bolder " style={{fontFamily: 'Fredoka One, cursive'}}>HEY !<br/> </h1>
+                    <h3 className="pb-2" style={{fontFamily: 'Permanent Marker, cursive'}}><ReactRotatingText items={['ARE YOU TIRED OF EVERDAY HUSTLE?', 'DO YOU WANNA RELAX?']} /></h3>
+                    <Link to="/musicplayer"><p class="card-text">Listen to Some Music!</p></Link>
                     </div> 
-                    {/* <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> */}
+                    
                     </div>
                 </div>
                 
