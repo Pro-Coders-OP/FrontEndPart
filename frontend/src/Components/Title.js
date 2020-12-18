@@ -3,11 +3,12 @@ import sairaman from "../assets/sairaman.jpg"
 import { Link } from "react-router-dom";
 import '../Title.css'
 
-function Title() {
+
+function Title({ onRouteChange, isSignedIn }) {
     // const { name } = props;
     var ReactRotatingText = require('react-rotating-text');
     
-
+    if(isSignedIn){
     return (
         <div className="container-fluid ">
             <div className="row">
@@ -20,7 +21,7 @@ function Title() {
                     <div className="py-5">
                     <h1 class="card-title mt-5 py-1 display-1 text-light font-weight-bolder " style={{fontFamily: 'Fredoka One, cursive'}}>HEY !<br/> </h1>
                     <h3 className="mb-5" style={{fontFamily: 'Permanent Marker, cursive'}}><ReactRotatingText items={['ARE YOU TIRED OF EVERDAY HUSTLE?', 'DO YOU WANNA RELAX?']} /></h3>
-                    <h6><Link to="/musicplayer"><p class="card-text">LISTEN TO SOME MUSIC ---></p></Link></h6>
+                    <h6><Link to="/musicplayer" onClick={() => onRouteChange('musicplayer')}><p class="card-text">LISTEN TO SOME MUSIC ---></p></Link></h6>
                     </div> 
                     
                     </div>
@@ -29,6 +30,8 @@ function Title() {
             </div>
         </div>      
     )
+    
+}
 }
 
 export default Title;
