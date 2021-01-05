@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-function Navbar({ onRouteChange, isSignedIn , name }) {
+function Navbar({ onRouteChange, isSignedIn , fname }) {
     if(isSignedIn) {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-                <a className="navbar-brand text-light" href="#">Welcome {name} !</a>
+                <a className="navbar-brand text-light" href="#">Welcome {fname} !</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>

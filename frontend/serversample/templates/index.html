@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Taking Picture from Webcam using webcam.js</title>
+    </head>
+    <style>
+        #camera {
+            width: 350px;
+            height: 350px;
+            border: 1px solid black;
+        }
+    </style>
+ 
+    <body>
+        <div id="camera"></div>
+        <!-- <form method="post"> -->
+            
+            <button name="submit" type=submit value=data_uri onclick="take_snapshot()">Take Snapshot</button>
+            <a href="http://localhost:3000/">Proceed</a>
+        <!-- <input type=button value="Save_Snapshot" onClick="saveSnap()"> -->
+        <div id="results"></div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    <script>
+
+            //load webcam
+
+            Webcam.set({
+                width:350,
+                height:350,
+                image_format:'jpeg',
+                jpeg_quality:90
+            })
+
+            Webcam.attach("#camera")
+        
+        function take_snapshot() {
+
+            Webcam.snap(function(data_uri) {
+                downloadImage('image',data_uri);
+                // document.getElementById('results').innerHTML=
+                // '<img id="imageprev" src="'+data_uri+'" />';
+                // return data_uri
+            });
+        }
+
+        downloadImage = function (name, datauri) {
+        var a = document.createElement('a');
+        a.setAttribute('download', name + '.png');
+        a.setAttribute('href', datauri);
+        a.click();
+    }
+  //console.log(text);
+ 
+
+
+
+    </script>
+
+    
+</html>

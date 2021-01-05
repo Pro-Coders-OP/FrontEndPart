@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import bg_1 from "../assets/bg_1.jpg"
 import "./SignIn_Reg.css"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default class Register extends Component {
 
@@ -15,7 +15,7 @@ export default class Register extends Component {
       Age:'',
 			email: '',
 			password: '',
-			type_music: ''	
+			songpref: ''	
 		}
 	}
 
@@ -44,22 +44,22 @@ export default class Register extends Component {
   }
 
   onmusictypeChange = (event) => {
-		this.setState({type_music: event.target.value})
+		this.setState({songpref: event.target.value})
   }
 
 
 	onSubmitSignIn =() => {
-		fetch('http://localhost:3001/register', {
+		fetch('http://localhost:3002/register', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
 				email: this.state.email,
 				password:this.state.password,
-        name:this.state.First_name,
+        fname:this.state.First_name,
         lname:this.state.Last_name,
         gender:this.state.Gender,
         age:this.state.Age,
-        songpref:this.state.type_music
+        songpref:this.state.songpref
 
 			})
 		})
@@ -68,7 +68,7 @@ export default class Register extends Component {
       if (user.id) {
         this.props.loadUser(user);
         // this.props.loadUser(user);
-				this.props.onRouteChange('faceemo');
+				this.props.onRouteChange('Webcam');
       }
 		})
     
@@ -83,7 +83,7 @@ export default class Register extends Component {
                    <img src={bg_1} class="card-img opacity_cls " alt="login_bg"/>
                       <div class="card-img-overlay">
                       <div className=" col-sm-4 mx-auto pt-1  rounded  bg-dark text-light">
-                       {/* <form> */}
+                     
                          <h2 className="text-center display-4 text-info pb-4">Sign Up</h2>
 
                          <div className="form-group">
@@ -113,14 +113,7 @@ export default class Register extends Component {
                              name="Gender"
                              onChange={this.onGenderChange}
                               />
-                            {/* <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="Gender_input" id="male_id"/>
-                           <label class="form-check-label" for="male_id"> Male</label>
-                           </div>
-                           <div class="form-check-inline ml-3">
-                             <input class="form-check-input" type="radio" name="Gender_input" id="female_id" />
-                             <label class="form-check-label" for="female_id">Female</label>
-                           </div> */}
+                         
                          </div>
 
                          <div className="form-group">
@@ -131,24 +124,7 @@ export default class Register extends Component {
                              name="Age"
                              onChange={this.onAgeChange}
                               />
-                            {/* <br></br> */}
-                            
-                            {/* <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="age_input" id="age_id"/>
-                           <label class="form-check-label" for="age_id"> age 1</label>
-                           </div>
-                           <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="age_input" id="age_id"/>
-                           <label class="form-check-label" for="age_id"> age 2</label>
-                           </div>
-                           <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="age_input" id="age_id"/>
-                           <label class="form-check-label" for="age_id"> age 3</label>
-                           </div>
-                           <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="age_input" id="age_id"/>
-                           <label class="form-check-label" for="age_id"> age 4</label>
-                           </div> */}
+                           
                            
                           </div>
 
@@ -172,41 +148,15 @@ export default class Register extends Component {
                             />
                          </div>
 
-                         {/* <div className="form-group">
-                           <label> Confirm Password</label>
-                           <input 
-                           type="password" 
-                           className="form-control" 
-                           name="Conf_password"
-                            />
-                         </div> */}
-
                          <div className="form-group">
                             <label >which type of songs do you mostly prefer to listen ?</label>
                             <input 
                            type="text" 
                            className="form-control" 
-                           name="type_music"
+                           name="songpref"
                            onChange={this.onmusictypeChange}
                             />
-                          {/* <br></br>
-                            
-                            <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="song_input" id="song_id"/>
-                           <label class="form-check-label" for="song_id"> type 1</label>
-                           </div>
-                           <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="song_input" id="song_id"/>
-                           <label class="form-check-label" for="song_id"> type 2</label>
-                           </div>
-                           <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="song_input" id="song_id"/>
-                           <label class="form-check-label" for="song_id"> type 3</label>
-                           </div>
-                           <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="song_input" id="song_id"/>
-                           <label class="form-check-label" for="song_id"> type 4</label>
-                           </div> */}
+                         
                            
                           </div>
 

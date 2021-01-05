@@ -17,7 +17,7 @@ export default class Facemo extends Component {
     onSubmitEmotion =() => {
       // console.log(this.props.name)
       // console.log(this.state.emotion)
-		  fetch('http://localhost:3001/Faceemo', {
+		  fetch('http://localhost:3002/Faceemo', {
 			      method: 'post',
 			      headers: {'Content-Type': 'application/json'},
 			      body: JSON.stringify({
@@ -34,8 +34,9 @@ export default class Facemo extends Component {
       .then(user => {
         if (user) {
         // console.log(user)
-        // this.props.loadUser(user);
-				this.props.onRouteChange('home');
+        this.props.loadUser(user);
+        
+				this.props.onRouteChange('Interval');
        }
       })
 }

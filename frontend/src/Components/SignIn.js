@@ -22,7 +22,7 @@ export default class SignIn extends Component {
 	}
 
   onSubmitSignIn =() => {
-		fetch('http://localhost:3001/signin', {
+		fetch('http://localhost:3002/signin', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
@@ -34,7 +34,7 @@ export default class SignIn extends Component {
     .then(user => {
       if (user.id) {
         this.props.loadUser(user);
-				this.props.onRouteChange('faceemo');
+				this.props.onRouteChange('home');
       }
     })
 		// .then(response => response.json())
