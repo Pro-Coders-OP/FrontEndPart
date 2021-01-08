@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
+import Musicpage from './Musicpage'
+
+
 
 export class Interval extends Component {
+  
     constructor(props) {
         super(props)
     
@@ -8,8 +12,10 @@ export class Interval extends Component {
             
             emotion:''
         }
-      
+
       }
+
+      
       // onSubmitImage = () => {
       //   fetch('http://127.0.0.1:5000/api' , {
       //   method: 'get',
@@ -18,11 +24,11 @@ export class Interval extends Component {
       // }
 // this.setState({emotion:data})
     componentDidMount() {
+      
       fetch('http://127.0.0.1:5000/api' , {
         method: 'get',
         headers: {'Content-Type': 'application/json'}
-      }).then(response => response.json()).then(data => this.setState({emotion:data}))
-    }
+      }).then(response => response.json()).then(data => this.setState({emotion:data}))}
 
     onSubmitEmotion =() => {
         // console.log(this.props.name)
@@ -31,7 +37,7 @@ export class Interval extends Component {
                     method: 'post',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
-                        name: this.props.fname,
+                        fname: this.props.fname,
                         // email:this.props.email,
                         gender:this.props.gender,
                         age: this.props.age,
@@ -44,20 +50,45 @@ export class Interval extends Component {
         .then(user => {
           if (user) {
           console.log(user)
-          // this.props.loadUser(user);
-          
+          this.props.loadUser(user);
           this.props.onRouteChange('home');
          }
         })
   }
 
 
-    render() {
+  render() {
+               setTimeout(this.onSubmitEmotion,20000)
+
         return (
-            <div>
-               {/* <button type="submit" onClick={this.onSubmitImage}>Submit My Image</button>   */}
-               <button type="submit" onClick={this.onSubmitEmotion}>Lets Go!</button>  
-            </div>
+          <div  className = "bgforinter" style ={{height:"auto",width:"100%"}} >
+
+          <div className="container-fluid ">
+          <div className="row">
+              <div className="col-12 mx-0 px-0">
+                  {/* <span><img className="img-fluid" src={sairaman} alt="image" /></span> */}
+              {/* </div> */}
+                          <div style={{ width: "700px", margin: "50px auto",marginBottom:"393px",marginTop:"335px" }}>
+                <div class="progress" style={{height:"50px"}}>
+                  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "100%"}}>
+                     <span class="title text-dark"><h3>Loading...</h3></span>
+                   </div>
+                 </div>
+               </div>
+              
+                
+                  
+          {/* <button type="submit" style={{marginBottom:"693px"}} onClick={this.onSubmitEmotion}>Lets Go!</button> */}
+
+                  {/* <h1 class="card-title mt-5 py-1 display-1 text-light font-weight-bolder " style={{fontFamily: 'Fredoka One, cursive'}}>HEY !<br/> </h1>
+                  <h3 className="mb-5" style={{fontFamily: 'Permanent Marker, cursive'}}><ReactRotatingText items={['ARE YOU TIRED OF EVERDAY HUSTLE?', 'DO YOU WANNA RELAX?']} /></h3>
+                  <h6><Link to="/musicplayer" onClick={() => onRouteChange('musicplayer')}><p class="card-text">LISTEN TO SOME MUSIC ---></p></Link></h6> */}
+                  </div> 
+                  
+                  </div>
+              </div>
+              </div>
+
         )
     }
 }

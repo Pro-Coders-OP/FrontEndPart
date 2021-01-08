@@ -1,25 +1,26 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-function Footer() {
+function Footer({ onRouteChange, isSignedIn}) {
+  if(isSignedIn) {
     return (
         <footer>
             <div className="container-fluid text-center pb-5" style={{ backgroundColor: "black" }}>
                 <div className="py-5">
                     <h1 className="text-light pb-3">A Group Project By 'TE-C SCOE' Students</h1>
-                    <button className="btn btn-outline-light btn-sm">FeedBack</button>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScTzei-7i30HLMtCJptxuuE57vXLP-K8ppBV1apYFFpJIjJ-A/viewform?usp=sf_link" target="_blank"><button className="btn btn-outline-light btn-sm">FeedBack</button></a>
                 </div>
             
 
             <div className="row">
                 <div className="col-12 col-md-4 py-3">
                     <h5 className="text-info pb-3">More Links</h5>
-                    <Link className="text-light d-block zoom" to="/">Home</Link>
-                    <a className="text-light d-block zoom" href="#">How it Works!</a>
+                    <Link className="text-light d-block zoom" to="/home" onClick={() => onRouteChange('home') }>Home</Link>
+                    <Link className="text-light d-block zoom" to="/">How it Works!</Link>
                     <a className="text-light d-block zoom" href="#">Explore</a>
                     <a className="text-light d-block zoom" href="#">About Us</a>
                     <a className="text-light d-block zoom" href="#">Resources</a>
-                    <a className="text-light d-block zoom" href="#">Write a Recommendation <i className="fas fa-heart"></i></a>
+                    <Link className="text-light d-block zoom" to="/Suggestion" onClick={() => onRouteChange('Suggestion') }>Write a Suggestion <i className="fas fa-heart"></i></Link>
                 </div>
 
                 <div className="col-12 col-md-4 py-3 text-light text-justify-center">
@@ -52,6 +53,7 @@ function Footer() {
         </div>
         </footer>
     )
+  }
 }
 
 export default Footer;

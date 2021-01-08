@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
+
 function Navbar({ onRouteChange, isSignedIn , fname }) {
     if(isSignedIn) {
         return (
@@ -15,13 +16,13 @@ function Navbar({ onRouteChange, isSignedIn , fname }) {
                         <Link className="nav-link text-light mx-2" to="/homepage"  onClick={() => onRouteChange('home')}>Home <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link text-light mx-2" href="#">How it Works!</a>
+                        <Link className="nav-link text-light mx-2" to="/howitworks" onClick={() => onRouteChange('HowItWorks')}>How it Works!</Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link text-light mx-2" href="#">Explore</a>
+                        <Link className="nav-link text-light mx-2" to="/Explore" onClick={() => onRouteChange('Explore')}>Explore</Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link text-light mx-2" href="#">About Us</a>
+                        <Link className="nav-link text-light mx-2" to="/About" onClick={() => onRouteChange('AboutUs')}>About Us</Link>
                         </li>
                     </ul>
                     <div className="nav-item text-light mx-2" onClick={() => onRouteChange('signout')}>SignOut <i className="mx-1 fas fa-sign-out-alt"></i></div>

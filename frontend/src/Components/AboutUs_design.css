@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  .social-link:hover,
+  .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+  }
+  .margin-define {
+    margin-top: 0px;
+  }
+  
+  .carousel-item {
+    height: 390px;
+  }
+  
+  .item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 300px;
+  }
+  #margindefineleft {
+    margin-left: 100px;
+  }
+  .mrgn_right {
+    margin-right: 100px;
+  }
+  .big-banner {
+    background-image: url(../assets/bg_for_how.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  /* style={{ height:"300px",width:"500px", marginLeft:"400px",marginTop:"50px"}} */
+  /* style={{ height: "300px", width: "500px", marginLeft: "110px" }} */
+  .bgforsurvey {
+    background-image: url(https://cdn.staticcrate.com/stock-hd/graphics/textures-clean-backdrops/GraphicsCrate-Clean_Abstract_Background_05_prev_sm.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

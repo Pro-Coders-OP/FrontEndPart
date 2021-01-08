@@ -46,7 +46,7 @@ function WebcamCapture({ onRouteChange, isSignedIn }) {
                <button className="btn btn-primary btn-lg  " onClick={capture}>Capture photo</button>
         </div>
             <div className="mt-2 mx-auto ">
-              <button className="btn btn-warning btn-lg" onClick={() => onRouteChange('Interval')}><a href={imgSrc} download>Submit</a></button>
+              <button className="btn btn-warning btn-lg" onClick={() => onRouteChange('InterSignin')}><a href={imgSrc} download>Submit</a></button>
              
             </div>
             <div class = " col-4"></div>
