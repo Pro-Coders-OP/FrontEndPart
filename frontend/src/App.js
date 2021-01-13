@@ -137,7 +137,7 @@ class App extends Component {
       route === 'musicplayer'?
       <div>
         <Navbar isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} fname={this.state.user.fname}/>
-        <Musicpage emotion={this.state.user.emotion}/>
+        <Musicpage isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} emotion={this.state.user.emotion}/>
         <Footer isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
       </div>
       :

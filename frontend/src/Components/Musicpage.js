@@ -14,7 +14,7 @@ class Musicpage extends Component {
   // prop = happy
   
     render() {
-      const {emotion} = this.props
+      const {emotion,onRouteChange} = this.props
       console.log(emotion)
 
       const song = [
@@ -73,7 +73,7 @@ class Musicpage extends Component {
           artist: "S P Balasubrahmanyam",
           img_src: "https://a10.gaanacdn.com/images/albums/54/23654/crop_175x175_23654.jpg",
           src: "https://medium.loadbig.info/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhbGJ1bV9pZCI6ODUwNywidGltZW91dCI6MTYxMDA4OTY3MX0.VVWxv8_zulReN8l5OVjf_hFAkaEeDIVwGLkLM3ZvGeU/wjoih/Dil%20Deewana%20-%20%28amlijatt.in%29.mp3"
-        },
+         },
         {
           title: "Yaad Piya Ki Aane Lagi",
           artist: "Neha Kakkar",
@@ -153,7 +153,7 @@ class Musicpage extends Component {
           {/* <div className="img_back"> */}
             <img class="card-img img-fluid " style={{opacity: 0.4}} src={mixer} alt="Card image"/>
                   <div class="card-img-overlay" >
-                  
+                  <button className="btn btn-primary" type="button" onClick={() => onRouteChange('home')}><i class="fas fa-arrow-circle-left"></i></button>
                         <Musicmain song={song[0]}/>            
                     {/* <h5 class="card-title">{this.props.emotion}</h5> */}
                     {/*<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -170,7 +170,7 @@ class Musicpage extends Component {
                 {/* <div className="img_back"> */}
                   <img class="card-img img-fluid " style={{opacity: 0.4}} src={mixer} alt="Card image"/>
                         <div class="card-img-overlay" >
-                        
+                        <button className="btn btn-primary" type="button" onClick={() => onRouteChange('home')}><i class="fas fa-arrow-circle-left"></i></button>
                               <Musicmain song={song[1]}/>            
                            {/* <h5 class="card-title">{this.props.emotion}</h5> */}
                           {/*<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -187,7 +187,7 @@ class Musicpage extends Component {
                 {/* <div className="img_back"> */}
                   <img class="card-img img-fluid " style={{opacity: 0.4}} src={mixer} alt="Card image"/>
                         <div class="card-img-overlay" >
-                        
+                        <button className="btn btn-primary" type="button" onClick={() => onRouteChange('home')}><i class="fas fa-arrow-circle-left"></i></button>
                               <Musicmain song={song[2]}/>            
                            {/* <h5 class="card-title">{this.props.emotion}</h5> */}
                           {/*<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -205,6 +205,7 @@ class Musicpage extends Component {
                   <img class="card-img img-fluid " style={{opacity: 0.4}} src={mixer} alt="Card image"/>
                         <div class="card-img-overlay" >
                         {/* {emo} */}
+                        <button className="btn btn-primary" type="button" onClick={() => onRouteChange('home')}><i class="fas fa-arrow-circle-left"></i></button>
                               <Musicmain song={song[3]}/>            
                            {/* <h5 class="card-title">{this.props.emotion}</h5> */}
                           {/*<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

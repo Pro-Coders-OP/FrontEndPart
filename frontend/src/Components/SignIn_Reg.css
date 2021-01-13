@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 .card-img{
     opacity: 0.3;
 } 
@@ -46,4 +47,9 @@
     border-radius: 50%;
     border: 1px solid red;
     
+  }
+  .bgforhome {
+    background-image: url(https://i.pinimg.com/originals/0c/b2/ab/0cb2ab6226ff9987127a34145cf3478b.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }

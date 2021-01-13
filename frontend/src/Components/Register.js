@@ -15,7 +15,9 @@ export default class Register extends Component {
       Age:'',
 			email: '',
 			password: '',
-			songpref: ''	
+      songpref: '',
+      errormsg: '',
+      colorerrormsg: 'text-danger ',	
 		}
 	}
 
@@ -69,6 +71,8 @@ export default class Register extends Component {
         this.props.loadUser(user);
         // this.props.loadUser(user);
 				this.props.onRouteChange('Webcam');
+      } else {
+          this.setState({errormsg:user})
       }
 		})
     
@@ -106,7 +110,7 @@ export default class Register extends Component {
                             />
                          </div>
                          <div className="form-group">
-                             <label className="mr-5">Gender</label>
+                             <label className="mr-5">Gender <span className="text-warning" style={{fontSize:"15px"}}> (M/F)</span></label>
                              <input 
                              type="text" 
                              className="form-control" 
@@ -149,7 +153,7 @@ export default class Register extends Component {
                          </div>
 
                          <div className="form-group">
-                            <label >which type of songs do you mostly prefer to listen ?</label>
+                            <label >which type of songs do you mostly prefer to listen ? <br/><span className="text-warning" style={{fontSize:"15px"}}>(romantic/pop/devotional/retro)</span></label>
                             <input 
                            type="text" 
                            className="form-control" 
@@ -174,9 +178,19 @@ export default class Register extends Component {
 
                          <p className="forgot-password text-info text-right mt-2 mb-2">
                            Already registered <div onClick={() => this.props.onRouteChange('signin')}>sign in?</div>
-                         </p>
-                      {/* </form> */}
-                    </div>
+                    </p>
+                   
+                    {/* </form> */}
+                   
+                  </div>
+                  
+                  
+                  
+                </div>
+                <div className=" col-12 text-center  mx-0">
+                    
+                    <h3 className={this.state.colorerrormsg} >{this.state.errormsg}</h3>
+                    
                 </div>
             </div>
             </div>

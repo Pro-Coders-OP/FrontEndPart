@@ -51,27 +51,34 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-# import csv
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 1
 
+# import csv
 
 face_cascade = cv2.CascadeClassifier(r'haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 model = load_model(r'model21_final.h5')
-path = 'C:\\Users\malip\Downloads'
+path = 'C:\\Users\ACER\Downloads'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
-oldest = files[0]
-newest = files[-1]
-
-print ("Oldest:", oldest)
-print ("Newest:", newest)
 
 
-@app.route('/api',methods=['GET','POST'])
 
+
+
+@app.route('/api', methods=['GET', 'POST'])
+
+		
 def api():
-	image = cv2.imread(os.path.join("C:\\","Users","malip","Downloads",newest))
+	path = 'C:\\Users\ACER\Downloads'
+	os.chdir(path)
+	files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)	
+	oldest = files[0]
+	newest = files[-1]
+
+
+	image = cv2.imread(os.path.join("C:\\","Users","ACER","Downloads",newest))
 	# image=cv2.imread('download.jfif')
 	image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	faces = face_cascade.detectMultiScale(image, 1.3, 5)
@@ -91,6 +98,15 @@ def api():
 	prediction = np.argmax(prediction)
 	final_prediction = class_labels[prediction]
 	return jsonify(final_prediction)
+def build_preflight_response():
+    response = make_response()
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    response.headers.add('Access-Control-Allow-Headers', "*")
+    response.headers.add('Access-Control-Allow-Methods', "*")
+    return response
+def build_actual_response(response):
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
 		
 		
 

@@ -38,7 +38,7 @@ export class Interval extends Component {
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
                         fname: this.props.fname,
-                        // email:this.props.email,
+                        email:this.props.email,
                         gender:this.props.gender,
                         age: this.props.age,
                         songpref: this.props.songpref,
