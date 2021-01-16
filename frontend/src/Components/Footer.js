@@ -16,10 +16,10 @@ function Footer({ onRouteChange, isSignedIn}) {
                 <div className="col-12 col-md-4 py-3">
                     <h5 className="text-info pb-3">More Links</h5>
                     <Link className="text-light d-block zoom" to="/home" onClick={() => onRouteChange('home') }>Home</Link>
-                    <Link className="text-light d-block zoom" to="/">How it Works!</Link>
-                    <a className="text-light d-block zoom" href="#">Explore</a>
-                    <a className="text-light d-block zoom" href="#">About Us</a>
-                    <a className="text-light d-block zoom" href="#">Resources</a>
+                    <Link className="text-light d-block zoom" to="/Howitworks" onClick={() => onRouteChange('HowItWorks') }>How it Works!</Link>
+                    <Link className="text-light d-block zoom" to="/Explore" onClick={() => onRouteChange('Explore') }>Explore</Link>
+                    <Link className="text-light d-block zoom" to="/AboutUs" onClick={() => onRouteChange('AboutUs') }>About Us</Link>
+                    {/* <Link className="text-light d-block zoom" to="/">Resources</a> */}
                     <Link className="text-light d-block zoom" to="/Suggestion" onClick={() => onRouteChange('Suggestion') }>Write a Suggestion <i className="fas fa-heart"></i></Link>
                 </div>
 
@@ -46,9 +46,9 @@ function Footer({ onRouteChange, isSignedIn}) {
                 </div>
             </div>
 
-            {/* <div className="text-muted py-3">
-                    <p>Copyright <i className="far fa-copyright"></i> Prasad Mali 2020</p>
-                </div>  */}
+            <div className="text-muted py-3">
+                    <p>Copyright <i className="far fa-copyright"></i> Pro CodersOP 2020</p>
+                </div> 
                 
         </div>
         </footer>

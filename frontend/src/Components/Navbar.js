@@ -25,7 +25,7 @@ function Navbar({ onRouteChange, isSignedIn , fname }) {
                         <Link className="nav-link text-light mx-2" to="/About" onClick={() => onRouteChange('AboutUs')}>About Us</Link>
                         </li>
                     </ul>
-                    <div className="nav-item text-light mx-2" onClick={() => onRouteChange('signout')}>SignOut <i className="mx-1 fas fa-sign-out-alt"></i></div>
+                    <div className="nav-item text-light mx-2" onClick={() => onRouteChange('signout')}><Link>SignOut <i className="mx-1 fas fa-sign-out-alt"></i></Link></div>
                 </div>
             </nav>
             )    
